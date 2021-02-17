@@ -43,3 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7fe241f037f5d40966b098856c2647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ballStartPosition: {x: 0, y: 6, z: -3}
+  _roundNames:
+  - "\u041E\u0442\u0431\u043E\u0440\u043E\u0447\u043D\u044B\u0435"
+  - "\u0427\u0435\u0442\u0432\u0435\u0440\u0442\u044C\u0444\u0438\u043D\u0430\u043B"
+  - "\u041F\u043E\u043B\u0443\u0444\u0438\u043D\u0430\u043B"
+  - "\u0424\u0438\u043D\u0430\u043B"
+  - "\u0410\u043B\u043C\u0430\u0437\u043D\u044B\u0439 \u0440\u0430\u0439"
+  _baseWinCount: 3
+  _finalWinCount: 5

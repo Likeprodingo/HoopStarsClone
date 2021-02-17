@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using Pool;
-using Script.GameController;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +18,7 @@ namespace GameController
 
         private void Init()
         {
+            AssetManager.GetInstance();
             GameManager.GetInstance();
             ObjectPool.GetInstance();
             LevelController.GetInstance();

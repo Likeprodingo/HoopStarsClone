@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using Effects;
+using Effect;
 using UnityEngine;
 
 namespace Score
@@ -22,7 +22,7 @@ namespace Score
         
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out BallDrag ball) && !_collected)
+            if (other.TryGetComponent(out BallScript ball) && !_collected)
             {
                 StartCoroutine(CollectDelay());
                 EarnedPoint?.Invoke(_type);

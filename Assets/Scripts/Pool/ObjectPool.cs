@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using GameController;
-using Script.GameController;
 using UnityEngine;
 using Util;
 
@@ -16,6 +15,7 @@ namespace Pool
         {
             base.Init();
             GameManager.GameEnded += GameManager_GameEnded;
+            PreparePool();
         }
         
         protected override void DeInit()
@@ -31,7 +31,7 @@ namespace Pool
         
         private void PreparePool()
         {
-            
+            Prepare(AssetManager.Instance.Ball,1);
         }
 
         private PooledObject PrepareObject(PooledObject pooledBehaviour)

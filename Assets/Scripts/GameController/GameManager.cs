@@ -9,12 +9,10 @@ namespace GameController
 {
     public class GameManager : GameObjectSingleton<GameManager>
     {
+
         [SerializeField] private float _slowMotionCount = 0.5f;
-        [SerializeField] private int _timerCount = 60;
-        
         public static event Action GameEnded = delegate { };
         public static event Action GameStarted = delegate { };
-        public static event Action TimeOut = delegate {  };
         
         protected override void Init()
         {
@@ -49,17 +47,6 @@ namespace GameController
         {
             Time.timeScale = 1;
             GameStarted?.Invoke();
-            
-        }
-
-        private IEnumerator Timer()
-        {
-            var waiter = new WaitForSeconds(1);
-            for (int i = 0; i < _timerCount; i++)
-            {
-                yield return waiter;
-            }
-            TimeOut?.Invoke();
         }
     }
 }

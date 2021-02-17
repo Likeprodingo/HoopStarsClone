@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5675811392355726882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6361319522429065521}
+  - component: {fileID: 1101502183551860427}
+  m_Layer: 0
+  m_Name: AssetManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6361319522429065521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675811392355726882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -32.22269, y: 27.551498, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1101502183551860427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675811392355726882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c993832391694ebc8558cde1e67b5522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ballSkins:
+  - _material: {fileID: 2100000, guid: d7c93283bff8c0b4a92c9e28bbe6abec, type: 2}
+    _isActive: 1
+    _isAvailable: 1
+  - _material: {fileID: 2100000, guid: 9c0b5871a5dadb04997a0b36acaada97, type: 2}
+    _isActive: 0
+    _isAvailable: 1
+  - _material: {fileID: 2100000, guid: ae366f2486cf69d4f96d97abf0c8e3e0, type: 2}
+    _isActive: 0
+    _isAvailable: 1
+  _circleSkins:
+  - _material: {fileID: 2100000, guid: ae366f2486cf69d4f96d97abf0c8e3e0, type: 2}
+    _isPlayer: 1
+    _isBot: 0
+    _isAvailable: 1
+  - _material: {fileID: 2100000, guid: d7c93283bff8c0b4a92c9e28bbe6abec, type: 2}
+    _isPlayer: 0
+    _isBot: 0
+    _isAvailable: 1
+  - _material: {fileID: 2100000, guid: 9c0b5871a5dadb04997a0b36acaada97, type: 2}
+    _isPlayer: 0
+    _isBot: 1
+    _isAvailable: 1
+  _ball: {fileID: 4565685410898419511, guid: fdf8b0da2a11f3346b72ecdc205b8182, type: 3}

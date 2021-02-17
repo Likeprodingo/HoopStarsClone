@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections;
-using Effects;
+using Effect;
 using GameController;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Bot
 {
@@ -11,7 +12,8 @@ namespace Bot
         [SerializeField] private float _jumpDelay = 1f;
         [SerializeField] private Rigidbody _rigidbody = default;
         [SerializeField] private Vector3 _jumpDirection = default;
-
+        [SerializeField] private Vector3 _startPosition = default;
+        
         private Transform _ball;
         private Transform _currentTransform;
         private JumpDirection _type;
@@ -56,11 +58,16 @@ namespace Bot
         
         private void GameManager_GameStarted()
         {
-            _ball = BallDrag.Instance.transform;
             if (ReferenceEquals(_moving, null))
             {
                 _moving = StartCoroutine(Move());
             }
+        }
+
+        public void ResetPosition()
+        {
+            _currentTransform.position = _startPosition;
+            _type = JumpDirection.DOWN;
         }
 
         private IEnumerator Move()
@@ -75,7 +82,10 @@ namespace Bot
 
         private void Jump(Vector3 jump)
         {
-            _rigidbody.velocity = Vector3.zero;
+            if (_type != JumpDirection.DOWN)
+            {
+                _rigidbody.velocity = Vector3.zero;
+            }
             _rigidbody.AddForce(jump,ForceMode.Impulse);
         }
 
@@ -120,6 +130,11 @@ namespace Bot
                 }
             }
             return dir;
+        }
+
+        public void SetAim(BallScript ball)
+        {
+            _ball = ball.transform;
         }
     }
 }

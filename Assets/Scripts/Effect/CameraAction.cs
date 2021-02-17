@@ -1,9 +1,8 @@
-﻿using System;
+﻿using DG.Tweening;
 using Score;
 using UnityEngine;
-using DG.Tweening;
 
-namespace Effects
+namespace Effect
 {
     public class CameraAction : MonoBehaviour
     {
